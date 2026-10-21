@@ -25,6 +25,9 @@ class LogisticRegression(nn.Module):
     def forward(self, x):
         return self.linear(self.flatten(x))
 
+def build_model():
+    """Entry point used by train.py (--model logreg)."""
+    return LogisticRegression()
 
 if __name__ == "__main__":
     # Sanity check on fake data: no dataset needed.
