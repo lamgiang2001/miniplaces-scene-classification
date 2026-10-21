@@ -33,6 +33,9 @@ class MLPBaseline(nn.Module):
         x = self.relu(x)
         x = self.fc2(x)
         return x
+    
+def build_model():
+    return MLPBaseline()
 
 if __name__ == "__main__":
     # Test the model with fake images
