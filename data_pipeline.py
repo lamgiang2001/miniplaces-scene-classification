@@ -20,11 +20,13 @@ or pass --data_root to point elsewhere):
 
 import argparse
 import os
+import random
 from collections import defaultdict
 
+import numpy as np
+import torch
 from PIL import Image
 from torch.utils.data import Dataset, DataLoader
-from torchvision import transforms
 
 
 def read_label_file(label_file_path):
@@ -38,6 +40,33 @@ def read_label_file(label_file_path):
             rel_path, label_str = line.rsplit(" ", 1)
             pairs.append((rel_path, int(label_str)))
     return pairs
+
+
+def read_category_names(category_file_path):
+    """Read class names indexed by the integer labels in the split files."""
+    category_names = []
+    with open(category_file_path, "r") as category_file:
+        for line in category_file:
+            line = line.strip()
+            if not line:
+                continue
+            category_path, label_str = line.rsplit(" ", 1)
+            label = int(label_str)
+            if label < 0:
+                raise ValueError(f"Category labels must be non-negative: {line}")
+            if label >= len(category_names):
+                category_names.extend(
+                    [""] * (label + 1 - len(category_names))
+                )
+            if category_names[label]:
+                raise ValueError(f"Duplicate category label: {label}")
+            category_names[label] = category_path.strip("/").split("/")[-1]
+
+    if not category_names or any(not name for name in category_names):
+        raise ValueError(
+            f"Category labels in {category_file_path} must be contiguous from 0."
+        )
+    return category_names
 
 
 def stratified_split(pairs, val_fraction=0.1, seed=42):
@@ -81,35 +110,30 @@ class MiniPlacesDataset(Dataset):
     def __getitem__(self, idx):
         rel_path, label = self.pairs[idx]
         full_path = os.path.join(self.image_root, rel_path)
-        image = Image.open(full_path).convert("RGB")
+        with Image.open(full_path) as image_file:
+            image = image_file.convert("RGB")
         if self.transform is not None:
             image = self.transform(image)
         return image, label
 
 
+class ImageTransform:
+    def __init__(self, *, augment=False):
+        self.augment = augment
+        self.mean = torch.tensor([0.485, 0.456, 0.406]).view(3, 1, 1)
+        self.std = torch.tensor([0.229, 0.224, 0.225]).view(3, 1, 1)
+
+    def __call__(self, image):
+        image = image.resize((128, 128), Image.Resampling.BILINEAR)
+        if self.augment and random.random() < 0.5:
+            image = image.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
+        pixels = np.asarray(image, dtype=np.float32).copy() / 255.0
+        tensor = torch.from_numpy(pixels.transpose(2, 0, 1))
+        return (tensor - self.mean) / self.std
+
+
 def build_transforms():
-    # Normalization stats are ImageNet's standard values; fine as a default
-    # starting point even for from-scratch models, and necessary if you
-    # later fine-tune any ImageNet-pretrained backbone.
-    normalize = transforms.Normalize(
-        mean=[0.485, 0.456, 0.406],
-        std=[0.229, 0.224, 0.225],
-    )
-
-    train_transform = transforms.Compose([
-        transforms.Resize((128, 128)),
-        transforms.RandomHorizontalFlip(),
-        transforms.ToTensor(),
-        normalize,
-    ])
-
-    eval_transform = transforms.Compose([
-        transforms.Resize((128, 128)),
-        transforms.ToTensor(),
-        normalize,
-    ])
-
-    return train_transform, eval_transform
+    return ImageTransform(augment=True), ImageTransform()
 
 
 def build_dataloaders(data_root, batch_size=128, val_fraction=0.1, num_workers=4, seed=42,
@@ -140,12 +164,13 @@ def build_dataloaders(data_root, batch_size=128, val_fraction=0.1, num_workers=4
     val_dataset = MiniPlacesDataset(image_root, val_pairs, transform=eval_transform)
     test_dataset = MiniPlacesDataset(image_root, official_val_pairs, transform=eval_transform)
 
+    pin_memory = torch.cuda.is_available()
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True,
-                               num_workers=num_workers, pin_memory=True)
+                               num_workers=num_workers, pin_memory=pin_memory)
     val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False,
-                             num_workers=num_workers, pin_memory=True)
+                             num_workers=num_workers, pin_memory=pin_memory)
     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False,
-                              num_workers=num_workers, pin_memory=True)
+                              num_workers=num_workers, pin_memory=pin_memory)
 
     print(f"Train: {len(train_dataset)} images | "
           f"Val (ours, for tuning): {len(val_dataset)} images | "
