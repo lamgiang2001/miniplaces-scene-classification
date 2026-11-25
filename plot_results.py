@@ -1,7 +1,7 @@
 """
 Plot MLP training results (5 epochs).
 
-Makes two line plots from results in mlp_model.py:
+Makes two line plots from results/mlp_baseline_results.json:
   1. Validation accuracy (top-1 and top-5) per epoch
   2. Loss (train and validation) per epoch
 """
