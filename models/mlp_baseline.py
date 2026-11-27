@@ -22,7 +22,7 @@ class MLPBaseline(nn.Module):
         super().__init__()
 
         in_features = 3 * img_size * img_size
-        self.flatten = nn.Flatten()
+        self.flatten = nn.Flatten()      # flatten input to 1D vector
         self.fc1 = nn.Linear(in_features, hidden_size)
         self.relu = nn.ReLU()
         self.fc2 = nn.Linear(hidden_size, num_classes)
@@ -34,10 +34,8 @@ class MLPBaseline(nn.Module):
         x = self.fc2(x)
         return x
 
-
 def build_model():
     return MLPBaseline()
-
 
 if __name__ == "__main__":
     # Test the model with fake images
