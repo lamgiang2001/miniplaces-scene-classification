@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="720" viewBox="0 0 820 720">
+<rect width="100%" height="100%" fill="white"/>
+<text x="410" y="34" text-anchor="middle" font-size="20">MLP_BASELINE metrics by epoch</text>
+<text x="434.0" y="58" text-anchor="middle" font-size="16">Training and validation loss</text>
+<line x1="80" y1="308.0" x2="788" y2="308.0" stroke="#dddddd"/>
+<text x="70" y="312.0" text-anchor="end" font-size="11">3.40</text>
+<line x1="80" y1="264.0" x2="788" y2="264.0" stroke="#dddddd"/>
+<text x="70" y="268.0" text-anchor="end" font-size="11">3.86</text>
+<line x1="80" y1="220.0" x2="788" y2="220.0" stroke="#dddddd"/>
+<text x="70" y="224.0" text-anchor="end" font-size="11">4.33</text>
+<line x1="80" y1="176.0" x2="788" y2="176.0" stroke="#dddddd"/>
+<text x="70" y="180.0" text-anchor="end" font-size="11">4.79</text>
+<line x1="80" y1="132.0" x2="788" y2="132.0" stroke="#dddddd"/>
+<text x="70" y="136.0" text-anchor="end" font-size="11">5.26</text>
+<line x1="80" y1="88.0" x2="788" y2="88.0" stroke="#dddddd"/>
+<text x="70" y="92.0" text-anchor="end" font-size="11">5.73</text>
+<text x="80.0" y="330" text-anchor="middle" font-size="12">1</text>
+<text x="130.6" y="330" text-anchor="middle" font-size="12">2</text>
+<text x="181.1" y="330" text-anchor="middle" font-size="12">3</text>
+<text x="231.7" y="330" text-anchor="middle" font-size="12">4</text>
+<text x="282.3" y="330" text-anchor="middle" font-size="12">5</text>
+<text x="332.9" y="330" text-anchor="middle" font-size="12">6</text>
+<text x="383.4" y="330" text-anchor="middle" font-size="12">7</text>
+<text x="434.0" y="330" text-anchor="middle" font-size="12">8</text>
+<text x="484.6" y="330" text-anchor="middle" font-size="12">9</text>
+<text x="535.1" y="330" text-anchor="middle" font-size="12">10</text>
+<text x="585.7" y="330" text-anchor="middle" font-size="12">11</text>
+<text x="636.3" y="330" text-anchor="middle" font-size="12">12</text>
+<text x="686.9" y="330" text-anchor="middle" font-size="12">13</text>
+<text x="737.4" y="330" text-anchor="middle" font-size="12">14</text>
+<text x="788.0" y="330" text-anchor="middle" font-size="12">15</text>
+<polyline points="80.0,137.2 130.6,166.8 181.1,190.2 231.7,209.1 282.3,222.3 332.9,233.3 383.4,241.8 434.0,248.3 484.6,253.9 535.1,258.0 585.7,261.7 636.3,264.8 686.9,267.8 737.4,269.9 788.0,272.3" fill="none" stroke="#1769aa" stroke-width="3"/>
+<circle cx="80.0" cy="137.2" r="4" fill="#1769aa"/>
+<circle cx="130.6" cy="166.8" r="4" fill="#1769aa"/>
+<circle cx="181.1" cy="190.2" r="4" fill="#1769aa"/>
+<circle cx="231.7" cy="209.1" r="4" fill="#1769aa"/>
+<circle cx="282.3" cy="222.3" r="4" fill="#1769aa"/>
+<circle cx="332.9" cy="233.3" r="4" fill="#1769aa"/>
+<circle cx="383.4" cy="241.8" r="4" fill="#1769aa"/>
+<circle cx="434.0" cy="248.3" r="4" fill="#1769aa"/>
+<circle cx="484.6" cy="253.9" r="4" fill="#1769aa"/>
+<circle cx="535.1" cy="258.0" r="4" fill="#1769aa"/>
+<circle cx="585.7" cy="261.7" r="4" fill="#1769aa"/>
+<circle cx="636.3" cy="264.8" r="4" fill="#1769aa"/>
+<circle cx="686.9" cy="267.8" r="4" fill="#1769aa"/>
+<circle cx="737.4" cy="269.9" r="4" fill="#1769aa"/>
+<circle cx="788.0" cy="272.3" r="4" fill="#1769aa"/>
+<line x1="80" y1="80" x2="104" y2="80" stroke="#1769aa" stroke-width="3"/>
+<text x="110" y="84" font-size="12">Train loss</text>
+<polyline points="80.0,205.8 130.6,214.6 181.1,222.7 231.7,229.0 282.3,237.8 332.9,241.6 383.4,245.7 434.0,249.9 484.6,251.5 535.1,252.8 585.7,254.6 636.3,256.3 686.9,259.3 737.4,259.8 788.0,259.3" fill="none" stroke="#d1495b" stroke-width="3"/>
+<circle cx="80.0" cy="205.8" r="4" fill="#d1495b"/>
+<circle cx="130.6" cy="214.6" r="4" fill="#d1495b"/>
+<circle cx="181.1" cy="222.7" r="4" fill="#d1495b"/>
+<circle cx="231.7" cy="229.0" r="4" fill="#d1495b"/>
+<circle cx="282.3" cy="237.8" r="4" fill="#d1495b"/>
+<circle cx="332.9" cy="241.6" r="4" fill="#d1495b"/>
+<circle cx="383.4" cy="245.7" r="4" fill="#d1495b"/>
+<circle cx="434.0" cy="249.9" r="4" fill="#d1495b"/>
+<circle cx="484.6" cy="251.5" r="4" fill="#d1495b"/>
+<circle cx="535.1" cy="252.8" r="4" fill="#d1495b"/>
+<circle cx="585.7" cy="254.6" r="4" fill="#d1495b"/>
+<circle cx="636.3" cy="256.3" r="4" fill="#d1495b"/>
+<circle cx="686.9" cy="259.3" r="4" fill="#d1495b"/>
+<circle cx="737.4" cy="259.8" r="4" fill="#d1495b"/>
+<circle cx="788.0" cy="259.3" r="4" fill="#d1495b"/>
+<line x1="270" y1="80" x2="294" y2="80" stroke="#d1495b" stroke-width="3"/>
+<text x="300" y="84" font-size="12">Validation loss</text>
+<text x="20" y="198.0" text-anchor="middle" transform="rotate(-90 20 198.0)" font-size="12">Cross-entropy loss</text>
+<text x="434.0" y="353" text-anchor="middle" font-size="12">Epoch</text>
+<text x="434.0" y="380" text-anchor="middle" font-size="16">Validation accuracy</text>
+<line x1="80" y1="630.0" x2="788" y2="630.0" stroke="#dddddd"/>
+<text x="70" y="634.0" text-anchor="end" font-size="11">0%</text>
+<line x1="80" y1="586.0" x2="788" y2="586.0" stroke="#dddddd"/>
+<text x="70" y="590.0" text-anchor="end" font-size="11">20%</text>
+<line x1="80" y1="542.0" x2="788" y2="542.0" stroke="#dddddd"/>
+<text x="70" y="546.0" text-anchor="end" font-size="11">40%</text>
+<line x1="80" y1="498.0" x2="788" y2="498.0" stroke="#dddddd"/>
+<text x="70" y="502.0" text-anchor="end" font-size="11">60%</text>
+<line x1="80" y1="454.0" x2="788" y2="454.0" stroke="#dddddd"/>
+<text x="70" y="458.0" text-anchor="end" font-size="11">80%</text>
+<line x1="80" y1="410.0" x2="788" y2="410.0" stroke="#dddddd"/>
+<text x="70" y="414.0" text-anchor="end" font-size="11">100%</text>
+<text x="80.0" y="652" text-anchor="middle" font-size="12">1</text>
+<text x="130.6" y="652" text-anchor="middle" font-size="12">2</text>
+<text x="181.1" y="652" text-anchor="middle" font-size="12">3</text>
+<text x="231.7" y="652" text-anchor="middle" font-size="12">4</text>
+<text x="282.3" y="652" text-anchor="middle" font-size="12">5</text>
+<text x="332.9" y="652" text-anchor="middle" font-size="12">6</text>
+<text x="383.4" y="652" text-anchor="middle" font-size="12">7</text>
+<text x="434.0" y="652" text-anchor="middle" font-size="12">8</text>
+<text x="484.6" y="652" text-anchor="middle" font-size="12">9</text>
+<text x="535.1" y="652" text-anchor="middle" font-size="12">10</text>
+<text x="585.7" y="652" text-anchor="middle" font-size="12">11</text>
+<text x="636.3" y="652" text-anchor="middle" font-size="12">12</text>
+<text x="686.9" y="652" text-anchor="middle" font-size="12">13</text>
+<text x="737.4" y="652" text-anchor="middle" font-size="12">14</text>
+<text x="788.0" y="652" text-anchor="middle" font-size="12">15</text>
+<polyline points="80.0,615.0 130.6,614.9 181.1,612.4 231.7,612.0 282.3,609.5 332.9,609.0 383.4,608.9 434.0,607.7 484.6,606.2 535.1,606.2 585.7,606.5 636.3,604.6 686.9,604.4 737.4,605.3 788.0,604.2" fill="none" stroke="#1769aa" stroke-width="3"/>
+<circle cx="80.0" cy="615.0" r="4" fill="#1769aa"/>
+<circle cx="130.6" cy="614.9" r="4" fill="#1769aa"/>
+<circle cx="181.1" cy="612.4" r="4" fill="#1769aa"/>
+<circle cx="231.7" cy="612.0" r="4" fill="#1769aa"/>
+<circle cx="282.3" cy="609.5" r="4" fill="#1769aa"/>
+<circle cx="332.9" cy="609.0" r="4" fill="#1769aa"/>
+<circle cx="383.4" cy="608.9" r="4" fill="#1769aa"/>
+<circle cx="434.0" cy="607.7" r="4" fill="#1769aa"/>
+<circle cx="484.6" cy="606.2" r="4" fill="#1769aa"/>
+<circle cx="535.1" cy="606.2" r="4" fill="#1769aa"/>
+<circle cx="585.7" cy="606.5" r="4" fill="#1769aa"/>
+<circle cx="636.3" cy="604.6" r="4" fill="#1769aa"/>
+<circle cx="686.9" cy="604.4" r="4" fill="#1769aa"/>
+<circle cx="737.4" cy="605.3" r="4" fill="#1769aa"/>
+<circle cx="788.0" cy="604.2" r="4" fill="#1769aa"/>
+<line x1="80" y1="402" x2="104" y2="402" stroke="#1769aa" stroke-width="3"/>
+<text x="110" y="406" font-size="12">Top-1 accuracy</text>
+<polyline points="80.0,586.7 130.6,582.7 181.1,578.5 231.7,574.9 282.3,572.1 332.9,570.6 383.4,570.2 434.0,566.9 484.6,566.3 535.1,565.0 585.7,563.3 636.3,562.4 686.9,561.5 737.4,561.0 788.0,560.6" fill="none" stroke="#d1495b" stroke-width="3"/>
+<circle cx="80.0" cy="586.7" r="4" fill="#d1495b"/>
+<circle cx="130.6" cy="582.7" r="4" fill="#d1495b"/>
+<circle cx="181.1" cy="578.5" r="4" fill="#d1495b"/>
+<circle cx="231.7" cy="574.9" r="4" fill="#d1495b"/>
+<circle cx="282.3" cy="572.1" r="4" fill="#d1495b"/>
+<circle cx="332.9" cy="570.6" r="4" fill="#d1495b"/>
+<circle cx="383.4" cy="570.2" r="4" fill="#d1495b"/>
+<circle cx="434.0" cy="566.9" r="4" fill="#d1495b"/>
+<circle cx="484.6" cy="566.3" r="4" fill="#d1495b"/>
+<circle cx="535.1" cy="565.0" r="4" fill="#d1495b"/>
+<circle cx="585.7" cy="563.3" r="4" fill="#d1495b"/>
+<circle cx="636.3" cy="562.4" r="4" fill="#d1495b"/>
+<circle cx="686.9" cy="561.5" r="4" fill="#d1495b"/>
+<circle cx="737.4" cy="561.0" r="4" fill="#d1495b"/>
+<circle cx="788.0" cy="560.6" r="4" fill="#d1495b"/>
+<line x1="270" y1="402" x2="294" y2="402" stroke="#d1495b" stroke-width="3"/>
+<text x="300" y="406" font-size="12">Top-5 accuracy</text>
+<text x="20" y="520.0" text-anchor="middle" transform="rotate(-90 20 520.0)" font-size="12">Accuracy</text>
+<text x="434.0" y="675" text-anchor="middle" font-size="12">Epoch</text>
+</svg>

@@ -1,7 +1,7 @@
 """
 MLP baseline model for MiniPlaces scene classification.
 
-A hidden layer activated with ReLU, followed by an output layer.
+A hidden layer activated with ReLU, then dropout, followed by an output layer.
 
 Input : batch of images, shape (N, 3, 128, 128)
 Output: logits, shape (N, 100)
@@ -13,24 +13,28 @@ import torch.nn as nn
 IMG_SIZE = 128
 NUM_CLASSES = 100
 HIDDEN_SIZE = 512
+DROPOUT = 0.5
 
 class MLPBaseline(nn.Module):
-    def __init__(self, 
-                 img_size=IMG_SIZE, 
+    def __init__(self,
+                 img_size=IMG_SIZE,
                  num_classes=NUM_CLASSES, 
-                 hidden_size=HIDDEN_SIZE):
+                 hidden_size=HIDDEN_SIZE,
+                 dropout=DROPOUT):
         super().__init__()
 
         in_features = 3 * img_size * img_size
         self.flatten = nn.Flatten()      # flatten input to 1D vector
         self.fc1 = nn.Linear(in_features, hidden_size)
-        self.relu = nn.ReLU()
+        self.relu = nn.ReLU() # activation function
+        self.dropout = nn.Dropout(p=0.5) # drop 50% of the neurons to regularize
         self.fc2 = nn.Linear(hidden_size, num_classes)
 
     def forward(self, x):
         x = self.flatten(x)
         x = self.fc1(x)
         x = self.relu(x)
+        x = self.dropout(x)
         x = self.fc2(x)
         return x
 

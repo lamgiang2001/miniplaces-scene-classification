@@ -3,64 +3,136 @@
     "data_root": "/Users/anneliiselarson/Documents/Deep Learning/data 2",
     "image_root": "/Users/anneliiselarson/Documents/Deep Learning/data/images",
     "model": "mlp_baseline",
-    "epochs": 5,
+    "epochs": 15,
     "batch_size": 128,
     "val_fraction": 0.1,
     "lr": 0.0001,
     "weight_decay": 0.0001,
     "num_workers": 4,
     "seed": 42,
-    "out_dir": "results/lr1e-4",
-    "train_subset": 0
+    "out_dir": "results/dropout_lr1e-4_15ep",
+    "train_subset": 0,
+    "val_subset": 0,
+    "skip_test": false
   },
   "device": "mps",
   "params": 25217636,
-  "train_minutes": 5.465678230921427,
+  "train_minutes": 12.949324615796407,
   "val": {
-    "loss": 4.4498482543945315,
-    "top1": 0.0887,
-    "top5": 0.2646
+    "loss": 3.9138679580688476,
+    "top1": 0.1173,
+    "top5": 0.3156
   },
   "test": {
-    "loss": 4.450419841766357,
-    "top1": 0.0938,
-    "top5": 0.2639
+    "loss": 3.9009045578002928,
+    "top1": 0.1191,
+    "top5": 0.3213
   },
   "history": [
     {
       "epoch": 1,
-      "train_loss": 4.64519864171346,
-      "val_loss": 4.671503118896484,
-      "val_top1": 0.0656,
-      "val_top5": 0.2079
+      "train_loss": 5.2050962743123375,
+      "val_loss": 4.480004292297363,
+      "val_top1": 0.0681,
+      "val_top5": 0.197
     },
     {
       "epoch": 2,
-      "train_loss": 4.320635333591038,
-      "val_loss": 4.534684661102295,
-      "val_top1": 0.0799,
-      "val_top5": 0.2308
+      "train_loss": 4.8922278937445745,
+      "val_loss": 4.386197483825684,
+      "val_top1": 0.0685,
+      "val_top5": 0.2148
     },
     {
       "epoch": 3,
-      "train_loss": 4.07871797803243,
-      "val_loss": 4.470904135131836,
-      "val_top1": 0.0866,
-      "val_top5": 0.2433
+      "train_loss": 4.644667871263292,
+      "val_loss": 4.30064482421875,
+      "val_top1": 0.0799,
+      "val_top5": 0.2341
     },
     {
       "epoch": 4,
-      "train_loss": 3.887974413977729,
-      "val_loss": 4.515990502929688,
-      "val_top1": 0.0796,
-      "val_top5": 0.2491
+      "train_loss": 4.444286097717285,
+      "val_loss": 4.233884607696533,
+      "val_top1": 0.0817,
+      "val_top5": 0.2506
     },
     {
       "epoch": 5,
-      "train_loss": 3.721722182337443,
-      "val_loss": 4.4498482543945315,
-      "val_top1": 0.0887,
-      "val_top5": 0.2646
+      "train_loss": 4.305287254163954,
+      "val_loss": 4.140698020935059,
+      "val_top1": 0.0933,
+      "val_top5": 0.2633
+    },
+    {
+      "epoch": 6,
+      "train_loss": 4.188639822048611,
+      "val_loss": 4.100413994598389,
+      "val_top1": 0.0954,
+      "val_top5": 0.2702
+    },
+    {
+      "epoch": 7,
+      "train_loss": 4.0992518536037865,
+      "val_loss": 4.057777613830567,
+      "val_top1": 0.0961,
+      "val_top5": 0.272
+    },
+    {
+      "epoch": 8,
+      "train_loss": 4.030241667175293,
+      "val_loss": 4.012899892425537,
+      "val_top1": 0.1013,
+      "val_top5": 0.2868
+    },
+    {
+      "epoch": 9,
+      "train_loss": 3.9707806838141546,
+      "val_loss": 3.996303232574463,
+      "val_top1": 0.1083,
+      "val_top5": 0.2895
+    },
+    {
+      "epoch": 10,
+      "train_loss": 3.926873654683431,
+      "val_loss": 3.9828423004150393,
+      "val_top1": 0.1083,
+      "val_top5": 0.2955
+    },
+    {
+      "epoch": 11,
+      "train_loss": 3.888482032691108,
+      "val_loss": 3.9630738899230957,
+      "val_top1": 0.107,
+      "val_top5": 0.3032
+    },
+    {
+      "epoch": 12,
+      "train_loss": 3.8555258998446993,
+      "val_loss": 3.944973011779785,
+      "val_top1": 0.1156,
+      "val_top5": 0.3073
+    },
+    {
+      "epoch": 13,
+      "train_loss": 3.823352955118815,
+      "val_loss": 3.9135929061889647,
+      "val_top1": 0.1163,
+      "val_top5": 0.3112
+    },
+    {
+      "epoch": 14,
+      "train_loss": 3.8013284815046524,
+      "val_loss": 3.9083315170288087,
+      "val_top1": 0.1124,
+      "val_top5": 0.3138
+    },
+    {
+      "epoch": 15,
+      "train_loss": 3.7760763508690727,
+      "val_loss": 3.9138679580688476,
+      "val_top1": 0.1173,
+      "val_top5": 0.3156
     }
   ]
 }

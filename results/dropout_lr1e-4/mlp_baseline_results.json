@@ -1,0 +1,68 @@
+{
+  "args": {
+    "data_root": "/Users/anneliiselarson/Documents/Deep Learning/data 2",
+    "image_root": "/Users/anneliiselarson/Documents/Deep Learning/data/images",
+    "model": "mlp_baseline",
+    "epochs": 5,
+    "batch_size": 128,
+    "val_fraction": 0.1,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "num_workers": 4,
+    "seed": 42,
+    "out_dir": "results/dropout_lr1e-4",
+    "train_subset": 0,
+    "val_subset": 0,
+    "skip_test": false
+  },
+  "device": "mps",
+  "params": 25217636,
+  "train_minutes": 3.873485048611959,
+  "val": {
+    "loss": 4.140698020935059,
+    "top1": 0.0933,
+    "top5": 0.2633
+  },
+  "test": {
+    "loss": 4.130172235870361,
+    "top1": 0.0968,
+    "top5": 0.2656
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 5.2050962743123375,
+      "val_loss": 4.480004292297363,
+      "val_top1": 0.0681,
+      "val_top5": 0.197
+    },
+    {
+      "epoch": 2,
+      "train_loss": 4.8922278937445745,
+      "val_loss": 4.386197483825684,
+      "val_top1": 0.0685,
+      "val_top5": 0.2148
+    },
+    {
+      "epoch": 3,
+      "train_loss": 4.644667871263292,
+      "val_loss": 4.30064482421875,
+      "val_top1": 0.0799,
+      "val_top5": 0.2341
+    },
+    {
+      "epoch": 4,
+      "train_loss": 4.444286097717285,
+      "val_loss": 4.233884607696533,
+      "val_top1": 0.0817,
+      "val_top5": 0.2506
+    },
+    {
+      "epoch": 5,
+      "train_loss": 4.305287254163954,
+      "val_loss": 4.140698020935059,
+      "val_top1": 0.0933,
+      "val_top5": 0.2633
+    }
+  ]
+}
